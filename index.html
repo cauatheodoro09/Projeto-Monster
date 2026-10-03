@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monster Flavors</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <a href="#inicio" class="logo">
+            <span>MONSTER</span>
+            <small>FLAVORS</small>
+        </a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sabores">Sabores</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= MENU MOBILE ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#inicio">Início</a>
+        <a href="#sabores">Sabores</a>
+        <a href="#sobre">Sobre</a>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <p class="tag">
+                MONSTER ENERGY
+            </p>
+
+            <h1>
+                EXPLORE
+                <span>TODOS OS SABORES</span>
+            </h1>
+
+            <p class="description">
+                Explore diferentes produtos e sabores encontrados
+                no catálogo internacional da Monster.
+            </p>
+
+            <a href="#sabores" class="btn">
+                VER SABORES
+            </a>
+
+        </div>
+
+
+        <!-- LATA PRINCIPAL -->
+
+        <div class="can-container">
+
+            <div class="can-glow"></div>
+
+            <div class="real-can">
+
+                <img
+                    src="img/tradicional.png"
+                    alt="Lata Monster"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SABORES ================= -->
+
+    <section class="flavors" id="sabores">
+
+        <div class="section-title">
+
+            <p>CATÁLOGO INTERNACIONAL</p>
+
+            <h2>
+                TODOS OS
+                <span>SABORES</span>
+            </h2>
+
+            <div class="line"></div>
+
+        </div>
+
+
+        <!-- ================= BUSCA ================= -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Pesquisar sabor..."
+                autocomplete="off"
+            >
+
+            <span>⌕</span>
+
+        </div>
+
+
+        <!-- ================= FILTROS ================= -->
+
+        <div class="filters">
+
+            <button
+                class="filter active"
+                data-category="all">
+                TODOS
+            </button>
+
+            <button
+                class="filter"
+                data-category="original">
+                MONSTER ENERGY
+            </button>
+
+            <button
+                class="filter"
+                data-category="ultra">
+                MONSTER ULTRA
+            </button>
+
+            <button
+                class="filter"
+                data-category="juice">
+                DRAGON TEA
+            </button>
+
+            <button
+                class="filter"
+                data-category="rehab">
+                JUICE MONSTER
+            </button>
+
+            <button
+                class="filter"
+                data-category="coffee">
+                OS MAIS PREFERIDOS
+            </button>
+
+        </div>
+
+
+        <!-- ================= LOGO (troca conforme o filtro) ================= -->
+
+        <div class="filters-logo">
+            <img id="filterLogo" src="img/logo.png" alt="Logo Monster Energy">
+        </div>
+
+
+        <!-- ================= GRID ================= -->
+
+        <div class="flavor-grid" id="flavorGrid">
+
+
+            <!-- ================================================= -->
+            <!-- MONSTER ENERGY -->
+            <!-- "coffee" no data-category = aparece em OS MAIS PREFERIDOS -->
+            <!-- ================================================= -->
+
+            <article class="flavor-card"
+                data-category="original coffee"
+                data-name="Original Green">
+
+                <div class="mini-can">
+                    <img src="img/tradicional.png" alt="Monster Original Green">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">01</span>
+                    <h3>Original Green</h3>
+
+                    <p class="card-desc">Surpreenda-se com a lata do energético mais animal do planeta. Com duas vezes mais energia do que uma bebida energética regular. Monster possui uma presença marcante e um sabor único! Inconfundível.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ORIGINAL</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="original coffee"
+                data-name="Zero Sugar">
+
+                <div class="mini-can">
+                    <img src="img/zero.webp" alt="Monster Zero Sugar">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">02</span>
+                    <h3>Zero Sugar</h3>
+
+                    <p class="card-desc">Faz tempo que a gente ouve a galera pedindo um Monster zero açúcar. E esse era o desafio! Fazer uma bebida com menos calorias, sem açúcar e gostosa a ponto de manter a pegada já conhecida da Monster, não foi moleza. Esse é o nosso DNA. Inovar e garantir que o sabor único da Monster possa ir para o seu rolê com menos calorias e zero açúcar. Ficou irado!</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ORIGINAL</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="original coffee"
+                data-name="Absolutely Zero">
+
+                <div class="mini-can">
+                    <img src="img/abso.webp" alt="Monster Absolutely Zero">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">03</span>
+                    <h3>Absolutely Zero</h3>
+
+                    <p class="card-desc">Monster Energy Absolutely Zero traz o mesmo sabor e o mesmo punch energético do original, com menos calorias e sem açúcares.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ORIGINAL</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="original"
+                data-name="269ML">
+
+                <div class="mini-can">
+                    <img src="img/pequeno.webp" alt="Monster 269ML">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">04</span>
+                    <h3>269ML</h3>
+
+                    <p class="card-desc">Chegou a nova lata de Monster Energy. A marca de energético dos esportes radicais, da música e do gaming, agora traz energia para você curtir a noite toda. O sabor insano de Monster Green, agora em uma lata de 269 ml. Leve, refrescante e com a energia de sempre. Vamos invadir a noite brasileira!</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ORIGINAL</span>
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- MONSTER ULTRA -->
+            <!-- ================================================= -->
+
+            <article class="flavor-card"
+                data-category="ultra coffee"
+                data-name="Ultra White">
+
+                <div class="mini-can">
+                    <img src="img/whide.png" alt="Monster Ultra White">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">05</span>
+                    <h3>Ultra White</h3>
+
+                    <p class="card-desc">Mais refrescante. Mais leve. Monster Energy Zero Ultra é zero açúcar e uma carga completa de nossa mistura de energia Monster.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ULTRA</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="ultra"
+                data-name="Ultra Violet">
+
+                <div class="mini-can">
+                    <img src="img/violet.png" alt="Monster Ultra Violet">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">06</span>
+                    <h3>Ultra Violet</h3>
+
+                    <p class="card-desc">Bem-vindo aos anos 70! Época de atitude, livre e positiva, com um estilo único e inconfundível: calças boca de sino com bandanas típicas e estampas tie-dye. Tempo onde o psicodélico, glamour, heavy metal e Rock se misturam em uma harmonia única. Pegou? Então vamos tomar um Monter Ultra Violet! Refrescante, com um sabor doce e picante, tão mágico e potente com o nosso blend clássico Monster Energy. Embarque com a Monster nessa viagem mágica de volta ao tempo.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ULTRA</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="ultra coffee"
+                data-name="Ultra Watermelon">
+
+                <div class="mini-can">
+                    <img src="img/watermelon.png" alt="Monster Ultra Watermelon">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">07</span>
+                    <h3>Ultra Watermelon</h3>
+
+                    <p class="card-desc">Sob o céu noturno iluminado por fogos de artifício, você tem sua paixão ao seu lado. Com boa música e melhores amigos, é o melhor verão de todos os tempos. Ultra Watermelon é verão em lata, para que você possa apreciá-lo a qualquer hora. Sem açúcar, sabor refrescante, com a mistura explosiva de energia Monster para iluminar as noites quentes de verão.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ULTRA</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="ultra"
+                data-name="Ultra Peachy Keen">
+
+                <div class="mini-can">
+                    <img src="img/peachy.png" alt="Monster Ultra Peachy Keen">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">08</span>
+                    <h3>Ultra Peachy Keen</h3>
+
+                    <p class="card-desc">Tudo fica bem quando você dá um gole no Ultra Peachy Keen. Zero açúcares, com sabor de pêssego e o nosso blend secreto de Monster Energy. Dos boomers aos zoomers, ele apaixona qualquer um.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ULTRA</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="ultra"
+                data-name="Fiesta Mango">
+
+                <div class="mini-can">
+                    <img src="img/fiesta.webp" alt="Monster Fiesta Mango">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">09</span>
+                    <h3>Fiesta Mango</h3>
+
+                    <p class="card-desc">Deixe para dormir depois, porque hoje vamos para a “Festa” como se não houvesse amanhã. Ultra Fiesta celebra as noites que duram até o dia e os amigos que agora são família. Zero açúcar, o Ultra Fiesta mistura o sabor tropical da manga com o Ultra que amamos, finalizando com a potência do nosso blend Monster Energy.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ULTRA</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="ultra"
+                data-name="Strawberry Dreams">
+
+                <div class="mini-can">
+                    <img src="img/strawberry.webp" alt="Monster Strawberry Dreams">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">10</span>
+                    <h3>Strawberry Dreams</h3>
+
+                    <p class="card-desc">Algumas pessoas dizem que morangos são afrodisíacos. Elas afirmam que se você compartilhar um morango duplo com alguém, essa pessoa vai se apaixonar por você. Tudo o que sabemos é que o sabor do fruto em forma de coração é perfeito para nosso novo Ultra zero açúcares. Deliciosamente doce e com um toque de acidez, esse Ultra é suave e tem o sabor dos sonhos. Desenvolvido com paixão com nosso mix único de Monster Energy que você ama, dê um gole e você vai enlouquecer por Ultra Strawberry Dreams.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">ULTRA</span>
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- DRAGON TEA -->
+            <!-- ================================================= -->
+
+            <article class="flavor-card"
+                data-category="juice coffee"
+                data-name="Dragon Ice Tea Limão">
+
+                <div class="mini-can">
+                    <img src="img/limao.webp" alt="Dragon Ice Tea Limão">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">11</span>
+                    <h3>Dragon Ice Tea Limão</h3>
+
+                    <p class="card-desc">Energético em formato de chá, sem gás com leve toque de limão. Inspirado em tradições milenares da china.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">DRAGON TEA</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="juice"
+                data-name="Dragon Ice Tea Pêssego">
+
+                <div class="mini-can">
+                    <img src="img/pessego.webp" alt="Dragon Ice Tea Pêssego">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">12</span>
+                    <h3>Dragon Ice Tea Pêssego</h3>
+
+                    <p class="card-desc">Energético em formato de chá, sem gás com leve toque de pêssego. Inspirado em tradições milenares da china.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">DRAGON TEA</span>
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- JUICE MONSTER -->
+            <!-- ================================================= -->
+
+            <article class="flavor-card"
+                data-category="rehab"
+                data-name="Juice Pacific Punch">
+
+                <div class="mini-can">
+                    <img src="img/pacifico.webp" alt="Juice Pacific Punch">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">13</span>
+                    <h3>Juice Pacific Punch</h3>
+
+                    <p class="card-desc">Com um sabor profundo e amplo, assim como o Oceano Pacífico, e com um mix de frutas nada tradicional inspirado nos clássicos ponches. Pacific Punch traz a energia Monster e chega para te deixar com vento em popa e pronto para encarar até as marés mais agitadas. O ponche de frutas naturais em sua versão mais irada!</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">JUICE MONSTER</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="rehab coffee"
+                data-name="Juice Mango Loco">
+
+                <div class="mini-can">
+                    <img src="img/loco.webp" alt="Juice Mango Loco">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">14</span>
+                    <h3>Juice Mango Loco</h3>
+
+                    <p class="card-desc">Todo ano, na noite de 31 de Outubro no México, amigos e famílias se reúnem para celebrar o “Dia de Los Muertos”. Misticismo e memórias com muita comida e bebida seduzem a alma dos que já se foram para se juntarem á festa. Monster Mango Loco é o Mix de sucos perfeito para atrair as almas mais teimosas. Sabor irado junto do clássico punch de Monster faz com que a energia da festa dure por dias.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">JUICE MONSTER</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="rehab"
+                data-name="Juice Khaotic">
+
+                <div class="mini-can">
+                    <img src="img/kha.webp" alt="Juice Khaotic">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">15</span>
+                    <h3>Juice Khaotic</h3>
+
+                    <p class="card-desc">De volta a 2005, Monster Juice Original abalou o jogo, combinando um delicioso suco de verdade e atitude de bebida energética. Agora, mais de uma década depois, decidimos que era hora de deixar esse clássico ainda mais irado. Melhoramos o sabor e ajustamos o mix de suco para criar um sabor ainda melhor.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">JUICE MONSTER</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="rehab"
+                data-name="Juice Pipeline Punch">
+
+                <div class="mini-can">
+                    <img src="img/pipeline.webp" alt="Juice Pipeline Punch">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">16</span>
+                    <h3>Juice Pipeline Punch</h3>
+
+                    <p class="card-desc">Banzai Pipeline, a onda mais famosa do mundo no lendário North Shore de Oahu, ganha vida por apenas alguns breves meses do ano. Em homenagem a essa força épica da natureza, criamos Juice Monster Pipeline Punch. A combinação perfeita dos melhores sabores que o Havaí oferece - maracujá, laranja e goiaba - depois Monsterizado com o nosso famoso combo energético. E assim como a onda que lhe deu o nome, está destinado a se tornar uma lenda!</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">JUICE MONSTER</span>
+                </div>
+
+            </article>
+
+
+            <article class="flavor-card"
+                data-category="rehab"
+                data-name="Juice Rio Punch">
+
+                <div class="mini-can">
+                    <img src="img/rio.webp" alt="Juice Rio Punch">
+                </div>
+
+                <div class="card-content">
+                    <span class="number">17</span>
+                    <h3>Juice Rio Punch</h3>
+
+                    <p class="card-desc">O Brasil faz tudo em grande estilo. Aqui é o lar de mais de 70% das frutas já conhecidas. Junte isso a maior festa do mundo, o Carnaval do Rio de Janeiro, e você terá uma inspiração épica! Juice Monster Rio Punch é uma sensação de sabor totalmente nova. É um mix de sabores de frutas exóticas com o toque de especiarias, finalizado com nosso punch energético Monster Energy. Da orla da Praia de Copacabana ao topo do Pão de Açúcar, o Rio Punch fará você festejar noite adentro.</p>
+                    <button class="more-btn" type="button" aria-expanded="false">MAIS</button>
+
+                    <span class="category">JUICE MONSTER</span>
+                </div>
+
+            </article>
+
+
+        </div>
+        <!-- fim do flavor-grid -->
+
+
+        <!-- ================= SEM RESULTADOS ================= -->
+
+        <div class="no-results" id="noResults">
+
+            <h3>Nenhum sabor encontrado.</h3>
+
+            <p>
+                Tente pesquisar outro nome ou selecionar outra categoria.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SOBRE ================= -->
+
+    <section class="about" id="sobre">
+
+        <div>
+
+            <p class="tag">
+                SOBRE O CATÁLOGO
+            </p>
+
+            <h2>
+                UM MUNDO DE
+                <span>SABORES</span>
+            </h2>
+
+            <p>
+                Este catálogo reúne diferentes produtos e sabores
+                encontrados no portfólio internacional da Monster.
+                A disponibilidade pode variar de acordo com o país
+                e da época.
+            </p>
+
+        </div>
+
+
+        <div class="about-number">
+
+            17
+
+            <small>
+                PRODUTOS CATALOGADOS
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Monster Flavors
+        </p>
+
+        <p>
+            Catálogo internacional
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

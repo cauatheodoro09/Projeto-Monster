@@ -1,0 +1,1314 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(0, 0, 0, .8);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    z-index: 1000;
+}
+
+
+.logo {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    text-decoration: none;
+
+    line-height: .9;
+}
+
+.logo span {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+}
+
+.logo small {
+    color: #55ff00;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    margin-top: 5px;
+}
+
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #55ff00;
+}
+
+
+.menu-btn {
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+.mobile-menu {
+    position: fixed;
+
+    top: 80px;
+    right: -100%;
+
+    width: 100%;
+
+    background: #080808;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+
+    text-align: center;
+
+    transition: .4s;
+
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding: 120px 7% 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(50,255,0,.15),
+            transparent 30%
+        ),
+        #050505;
+}
+
+
+.hero::before {
+    content: "MONSTER";
+
+    position: absolute;
+
+    left: -50px;
+    bottom: -80px;
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: 18vw;
+
+    color: rgba(255,255,255,.025);
+
+    pointer-events: none;
+}
+
+
+.hero-content {
+    max-width: 600px;
+
+    z-index: 2;
+}
+
+
+.tag {
+    color: #55ff00;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(65px, 9vw, 150px);
+
+    line-height: .85;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #55ff00;
+
+    text-shadow:
+        0 0 20px rgba(85,255,0,.3);
+}
+
+
+.description {
+    color: #999;
+
+    max-width: 470px;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    margin: 30px 0;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 17px 35px;
+
+    background: #55ff00;
+
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 30px rgba(85,255,0,.5);
+}
+
+
+/* ================= LATA PRINCIPAL ================= */
+
+.can-container {
+    width: 500px;
+    height: 650px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    perspective: 1000px;
+
+    z-index: 2;
+
+    flex-shrink: 0;
+}
+
+
+/* BRILHO ATRÁS DA LATA */
+
+.can-glow {
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    background: #55ff00;
+
+    filter: blur(110px);
+
+    opacity: .25;
+
+    animation: glow 4s ease-in-out infinite;
+}
+
+
+/* LATA GRANDE (tamanho: mude o width abaixo) */
+
+.real-can {
+    position: relative;
+
+    width: 220px;
+
+    max-width: none;
+
+    z-index: 2;
+
+    transform-style: preserve-3d;
+
+    filter:
+        drop-shadow(
+            25px 35px 25px rgba(0,0,0,.7)
+        );
+
+    animation:
+        floatingRealCan 4s ease-in-out infinite;
+}
+
+
+/* IMAGEM DA LATA */
+
+.real-can img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    transform-origin: center;
+
+    animation:
+        spinCan 7s ease-in-out infinite;
+}
+
+
+/* ================= FLUTUAÇÃO ================= */
+
+@keyframes floatingRealCan {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-4deg);
+    }
+
+    25% {
+        transform:
+            translateY(-18px)
+            rotate(2deg);
+    }
+
+    50% {
+        transform:
+            translateY(-30px)
+            rotate(5deg);
+    }
+
+    75% {
+        transform:
+            translateY(-15px)
+            rotate(-2deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(-4deg);
+    }
+}
+
+
+/* ================= GIRO ================= */
+
+@keyframes spinCan {
+
+    0% {
+        transform: rotateY(-12deg);
+    }
+
+    25% {
+        transform: rotateY(20deg);
+    }
+
+    50% {
+        transform: rotateY(12deg);
+    }
+
+    75% {
+        transform: rotateY(-20deg);
+    }
+
+    100% {
+        transform: rotateY(-12deg);
+    }
+}
+
+
+/* ================= LUZ ================= */
+
+@keyframes glow {
+
+    0%,
+    100% {
+        transform: scale(1);
+
+        opacity: .2;
+    }
+
+    50% {
+        transform: scale(1.15);
+
+        opacity: .35;
+    }
+}
+
+
+/* ================= SABORES ================= */
+
+.flavors {
+    padding: 120px 8%;
+
+    background: #090909;
+
+    min-height: 100vh;
+}
+
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.section-title p {
+    color: #55ff00;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    font-weight: 800;
+}
+
+
+.section-title h2 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(45px, 7vw, 90px);
+
+    margin-top: 10px;
+}
+
+
+.section-title h2 span {
+    color: #55ff00;
+}
+
+
+.line {
+    width: 70px;
+
+    height: 3px;
+
+    background: #55ff00;
+
+    margin: 20px auto;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    max-width: 500px;
+
+    margin: 0 auto 35px;
+
+    position: relative;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    padding: 18px 50px 18px 20px;
+
+    background: #111;
+
+    border: 1px solid #292929;
+
+    color: white;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #666;
+}
+
+
+.search-box input:focus {
+    border-color: #55ff00;
+}
+
+
+.search-box span {
+    position: absolute;
+
+    right: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #55ff00;
+
+    font-size: 25px;
+}
+
+
+/* ================= FILTROS ================= */
+
+.filters {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 50px;
+}
+
+
+.filter {
+    padding: 11px 22px;
+
+    background: transparent;
+
+    color: #aaa;
+
+    border: 1px solid #333;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    transition: .3s;
+}
+
+
+.filter:hover,
+.filter.active {
+    background: #55ff00;
+
+    color: black;
+
+    border-color: #55ff00;
+}
+
+
+/* ================= LOGO ABAIXO DOS FILTROS ================= */
+
+.filters-logo {
+    display: flex;
+
+    justify-content: center;
+
+    margin: 40px 0 30px;
+}
+
+.filters-logo img {
+    width: 140px;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* ================= GRID ================= */
+
+.flavor-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    /* Só o card aberto cresce, os outros mantêm a altura */
+    align-items: start;
+}
+
+
+/* ================= CARD ================= */
+
+/* O card agora é uma coluna: o conteúdo fica embaixo e,
+   quando o texto abre, o card cresce para baixo. */
+
+.flavor-card {
+    min-height: 430px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    /* espaço reservado para a lata no topo */
+    padding-top: 240px;
+
+    background: #101010;
+
+    border: 1px solid #222;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .4s;
+}
+
+
+.flavor-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #55ff00;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.5);
+}
+
+
+/* ================= MINI LATA ================= */
+
+.mini-can {
+    position: absolute;
+
+    width: 95px;
+    height: 250px;
+
+    top: 50px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(7deg);
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        10px 15px 25px rgba(0,0,0,.5);
+
+    transition: .5s;
+}
+
+
+.flavor-card:hover .mini-can {
+    transform:
+        translateX(-50%)
+        rotate(-5deg)
+        translateY(-10px);
+}
+
+
+.mini-can span {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 75px;
+
+    color: #55ff00;
+
+    font-style: italic;
+}
+
+
+/* ================= CARD CONTENT ================= */
+
+.card-content {
+    padding: 25px;
+
+    position: relative;
+
+    width: 100%;
+
+    min-width: 0;
+
+    background:
+        linear-gradient(
+            transparent,
+            #101010 35%
+        );
+}
+
+
+.number {
+    color: #55ff00;
+
+    font-size: 11px;
+
+    font-weight: 900;
+}
+
+
+.card-content h3 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 30px;
+
+    margin: 8px 0;
+}
+
+
+.card-content p {
+    color: #888;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+
+.category {
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    color: #55ff00;
+}
+
+
+/* ================= TEXTO EM UMA LINHA + BOTÃO MAIS ================= */
+
+.card-desc {
+    max-width: 100%;
+
+    white-space: nowrap;        /* uma linha só */
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;    /* "..." no final */
+}
+
+.card-desc.expanded {
+    white-space: normal;        /* mostra tudo */
+
+    overflow: visible;
+
+    text-overflow: clip;
+}
+
+.more-btn {
+    display: block;
+
+    margin: 0 0 15px;
+
+    padding: 6px 14px;
+
+    background: transparent;
+
+    color: #55ff00;
+
+    border: 1px solid #55ff00;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition: background .25s ease, color .25s ease;
+}
+
+.more-btn:hover,
+.more-btn:focus-visible {
+    background: #55ff00;
+
+    color: #000;
+}
+
+
+/* ================= CORES DAS LATAS ================= */
+
+.original-can {
+    background:
+        linear-gradient(
+            90deg,
+            #111,
+            #444,
+            #111
+        );
+}
+
+.zero-can {
+    background:
+        linear-gradient(
+            90deg,
+            #222,
+            #777,
+            #222
+        );
+}
+
+.absolute-can {
+    background:
+        linear-gradient(
+            90deg,
+            #111,
+            #777,
+            #111
+        );
+}
+
+.ultra-white {
+    background:
+        linear-gradient(
+            90deg,
+            #aaa,
+            #f5f5f5,
+            #999
+        );
+}
+
+.ultra-violet {
+    background:
+        linear-gradient(
+            90deg,
+            #32105c,
+            #9b48d7,
+            #32105c
+        );
+}
+
+.ultra-watermelon {
+    background:
+        linear-gradient(
+            90deg,
+            #6b0019,
+            #ff3155,
+            #720019
+        );
+}
+
+.ultra-peach {
+    background:
+        linear-gradient(
+            90deg,
+            #a54820,
+            #ff9b65,
+            #913918
+        );
+}
+
+.ultra-mango {
+    background:
+        linear-gradient(
+            90deg,
+            #806500,
+            #f1c800,
+            #725900
+        );
+}
+
+.ultra-strawberry {
+    background:
+        linear-gradient(
+            90deg,
+            #7d123d,
+            #ff4d86,
+            #761033
+        );
+}
+
+.pacific {
+    background:
+        linear-gradient(
+            90deg,
+            #42114e,
+            #b52bc9,
+            #35103f
+        );
+}
+
+.mango {
+    background:
+        linear-gradient(
+            90deg,
+            #a75a00,
+            #ffb52b,
+            #8b4700
+        );
+}
+
+.khaotic {
+    background:
+        linear-gradient(
+            90deg,
+            #9c3100,
+            #ff741f,
+            #762500
+        );
+}
+
+.pipeline {
+    background:
+        linear-gradient(
+            90deg,
+            #8c1458,
+            #ff4c9b,
+            #721044
+        );
+}
+
+.rio {
+    background:
+        linear-gradient(
+            90deg,
+            #005e4e,
+            #18cdb0,
+            #004b3e
+        );
+}
+
+.dragon-lemon {
+    background:
+        linear-gradient(
+            90deg,
+            #627c00,
+            #d5f329,
+            #526a00
+        );
+}
+
+.dragon-peach {
+    background:
+        linear-gradient(
+            90deg,
+            #9c4218,
+            #ff9b55,
+            #833514
+        );
+}
+
+
+/* ================= SEM RESULTADOS ================= */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    color: #777;
+
+    padding: 60px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 120px 10%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+
+    background: #050505;
+}
+
+
+.about > div:first-child {
+    max-width: 650px;
+}
+
+
+.about h2 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: .9;
+
+    margin-bottom: 30px;
+}
+
+
+.about h2 span {
+    color: #55ff00;
+}
+
+
+.about p:not(.tag) {
+    color: #888;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+.about-number {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 180px;
+
+    color: #55ff00;
+
+    line-height: .7;
+
+    text-align: center;
+}
+
+
+.about-number small {
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #777;
+
+    margin-top: 25px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 40px 8%;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+footer p {
+    color: #555;
+
+    font-size: 11px;
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 1200px) {
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .can-container {
+        width: 450px;
+    }
+
+    .flavor-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    .hero-content {
+        max-width: 500px;
+    }
+
+    .hero h1 {
+        font-size: clamp(60px, 8vw, 100px);
+    }
+
+    .can-container {
+        width: 400px;
+        height: 600px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 140px;
+
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .can-container {
+        width: 100%;
+
+        height: 550px;
+
+        margin-top: 20px;
+    }
+
+    .flavor-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .about {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .real-can {
+        width: 150px;
+    }
+
+    .can-glow {
+        width: 180px;
+        height: 180px;
+    }
+
+    .filters-logo img {
+        width: 100px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 6%;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .can-container {
+        height: 470px;
+    }
+
+    .flavors {
+        padding:
+            90px 6%;
+    }
+
+    .flavor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flavor-card {
+        min-height: 420px;
+    }
+
+    .about {
+        padding:
+            90px 6%;
+    }
+
+    .about-number {
+        font-size: 120px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .can-container {
+        height: 400px;
+    }
+
+    .real-can {
+        width: 130px;
+    }
+
+    .can-glow {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+/* ================= MINI LATA DOS CARDS (imagem) ================= */
+
+.mini-can {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.mini-can img {
+    width: 200px;
+    height: 280px;
+    object-fit: contain;
+    display: block;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.flavor-card:hover .mini-can img {
+    transform: scale(1.08) translateY(-5px);
+}
